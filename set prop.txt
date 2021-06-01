@@ -1,0 +1,72 @@
+SET:
+1.SET NOT CONTAIN DUPLICATE ELEMENT,
+2.sequence not maintened,
+3.single nonetype is allowed
+4.items are unchangeble
+properties:
+example:v1= {1,4}
+        v2={1,2}
+	1.union:
+	                 ans       v1       v2 
+					 
+	v1.union(v2)     1,2,4     1,4     1,2
+	v2.union(v1)     1,2,4     1,4     1,2
+	v1.update(v2)    none      1,2,4    1,2
+	v2.update(v1)     none     1,4    1,2,4
+	
+	2.difference:
+	                                ans        v1         v2 
+					 
+	v1.difference(v2)             2          1,4          1,2
+	v2.difference(v1)             4          1,4          1,2
+	v1.difference_dupdate(v2)    none       4            1,2
+	v2.difference_update(v1)     none       1,4           2
+	
+	
+	3.symetric difference:
+	                                        ans        v1         v2 
+					 
+	v1.symetric_difference(v2)             2,4          1,4          1,2
+	v2.symetric_difference(v1)             2,4          1,4          1,2
+	v1.symetric_difference_dupdate(v2)    none          2,4          1,2
+	v2.symetric_difference_update(v1)     none       1,4             2,4
+	
+	1.intersection:
+	                               ans       v1       v2 
+					 
+	v1.intersection(v2)            1         1,4     1,2
+	v2.intersection(v1)           1           1,4     1,2
+	v1.intersection_update(v2)    none      1         1,2
+	v2.intersection_update(v1)     none     1,4        1
+	
+	other properties:
+	ethod	                Description
+1.add()	                  Adds an element to the set
+
+2.clear()	             Removes all elements from the set
+
+3.copy()	             Returns a copy of the set
+
+4.difference()	         Returns the difference of two or more sets as a new set
+
+5.difference_update()	Removes all elements of another set from this set
+
+6.discard()          	Removes an element from the set if it is a member. (Do nothing if the element is not in set)
+
+7.intersection()	    Returns the intersection of two sets as a new set
+
+8.intersection_update()	Updates the set with the intersection of itself and another
+
+9.isdisjoint()       	Returns True if two sets have a null intersection
+
+10.issubset()	        Returns True if another set contains this set
+
+11.issuperset()      	Returns True if this set contains another set
+
+12.pop()	             Removes and returns an arbitrary set element. Raises KeyError if the set is empty
+
+13.remove()	             Removes an element from the set. If the element is not a member, raises a KeyError
+
+
+
+
