@@ -1,0 +1,380 @@
+Notes preparation for Python:
+
+Prerequisites:
+	Software  : Set of instructions / program to achive desired task.
+				eg. Pycharm [ IDE ]
+		
+		Framework : 'Its a platform for developing software applications and may also includes code libraries 
+					complier and other programms used in software developement processes.'
+					Collection of programm to build software
+					eg. Flask, Django
+		
+		Utility : Methods which are used for genral purposes
+					eg. 
+		
+		Tool : designed to perform specific task
+				eg. json parser / modules in python
+	
+	Software building process:  Tools --> Utility --> Framwork --> Software
+	
+	Static and Dynamic language (Interpreted and Compiled language)
+		static: checked at complied level an based on datatypes
+				need to define types of variable to get through compiler				
+				optimized performance in case of memory allocation
+				closer to machine language --> takes less time to execute **c, c++, java
+					eg. Program --> compiled --> execute
+						Every iteration afterwords it will start form compiled stage (1st time only it compiles)
+		compiler --> converts source code into byte code code
+					 java virtual machine converts byte code into mchine code
+					 
+		Dynamic: checked at interpreted level and based on values (datatypes will be taken by language)
+				 no need to specify type of data type --> based on the values it will defines				 
+				 memeory allocation is on higer side as it dynamicaaly changes as per values
+				 compared to static it takes more time as it runs from start every time.
+					eg. Program --> execute
+						Every iteration it start from begining
+		Interpreter --> python internally converts source code into byte code code
+					    python virtual machine converts byte code into mchine code
+		
+Python Language:
+	pypi : Repository for python program / libraries used in python
+	pep8 : Genral IT standards followed to use for writing code in python language
+		   CheatSheet link: https://cheatography.com/jmds/cheat-sheets/python-pep8-style-guide/#downloads
+	pip : (Python install packages)
+		  Program avilable on "pypi" repository can be installed on your macine through "pip" only
+		  to install one can use command line prompt / terminal window of activated envrionment
+	execution order : Sinlge line : Right to left
+					  Multiple Line : Module level to right indentations
+	venv vs pipenv
+
+Pycharm:
+	Virtual Environment setup: Every project has diffrent needs of libraries / modules
+		Enviroment helps to create projectwise collections of libraries and modules
+		It can be directy created through Pycharm from "New Project Section"
+		Or through Command prompt:
+			install virtualenv to python_home --> using virtualenv create new virtual environemnt in desired path
+	Library installation: 'refer pip line no 43'
+	
+Important terms:
+	Mutable and immutable
+		Mutable: list / dictionary / set
+			Object created at same memory location is called as mutable object.
+            genrally holds the business values which need to be iterates
+			
+		Immutable: tuple / int / string 
+			Object created changes the memory location is called as immutable object.
+            genrally holds universal constants or values which needs to be constant through out applications.
+                eg. date/admin details/sensitive information
+		
+	bit and byte size:
+		1 byte = 8 bit
+		int = 4 bit 'Genrally indian mobile no. are big so it is used (by bigint) in SQL'
+		
+	Ascii Values
+        Values associated to keyboard Keys
+        use: A-Z = 65-90
+             a-z = 97-122
+             0-9 = 48 - 57
+             spacebar = 32
+             
+	one's and two's compliment
+	
+	linkedlist
+			
+	contigious memory: array
+		Consecutive blocks of memory allocated to user processes are called contiguous memory.
+        
+	hash table
+		hash collision
+		hashing
+		
+	Intger caching: only Integers
+        Cache memory of Python has preloaded numbers -5 to 255 for frequent use in the program.
+        'why not float numbers were not added in caching?'
+            'In float there is infinite numbers between any two consecutive numbers.'
+	
+    functional and non functional testing:
+        functional:
+        
+        non functional testing:
+    
+    Diffrence between list and array:
+        List is collection of heterogenious objects: 'list contains high memory compared to list'
+                                                     Because datatype is dynamically decide in python based on value
+            eg. apple , mango, banana, grapes   --> all are fruits
+                int, float, string, complext    --> all are objects in python
+        Array is collection of homogenious objects: 'Array contains less memory compared to list'
+                                                    Because datatype is static and  predecide in array
+            eg. aplphansos, degad, keasar, badami --> all are mangoes
+                either all should be int / float / string  --> same datatype
+
+Data Structure: 
+    Mechanism through which we organise data so that it can be manipulate, retrive, modify as per business logic.
+
+Variable: 'Variable is a container on which we are going to store the values'
+
+Identifiers(Variable name): 'An identifier is nothing but a name assigned to an element in a program'
+
+Variable Datatype: 'type of data stores on Memory location.'
+                    a = 10 (a --> identifier , 10 is datatype dynamically decided as int)
+
+Data Types / token:
+	simple
+		number:	int     --> interger in numeric system [+ve and -ve]
+				float   --> decimal numbers
+				complex --> Imaginary numbers (3+3i) (Genrally used in Vectors and Algorithams)
+		string: To pass as Variable: single quotes / doulbe quotes --> 'Variable'  "Variable"
+                To pass as Multiline Comment: Triple Quotes  --> ''' Multiline Paragraph '''                
+		boolean {bool}: 1/0 , True/False  (in python 1 means True and 0 means False in loop logic)
+		nonetype: in python None type either blank value or 'None'
+	
+    complex 
+		list 
+		tuple
+		set:SET:
+1.SET NOT CONTAIN DUPLICATE ELEMENT,
+2.sequence not maintened,
+3.single nonetype is allowed
+4.items are unchangeble(imutable),but set itself is the MUTABLE
+properties:
+example:v1= {1,4}
+        v2={1,2}
+	1.union: mix up element except same element one time only
+	  update: just update answer at that position of 
+	                 ans       v1       v2 
+					 
+	v1.union(v2)     1,2,4     1,4     1,2
+	v2.union(v1)     1,2,4     1,4     1,2
+	v1.update(v2)    none      1,2,4    1,2
+	v2.update(v1)     none     1,4    1,2,4
+	
+	2.difference: remove the similer element
+	                                ans        v1         v2 
+					 
+	v1.difference(v2)             2          1,4          1,2
+	v2.difference(v1)             4          1,4          1,2
+	v1.difference_dupdate(v2)    none       4            1,2
+	v2.difference_update(v1)     none       1,4           2
+	
+	
+	3.symetric difference: removes similer 
+	                                        ans        v1         v2 
+					 
+	v1.symetric_difference(v2)             2,4          1,4          1,2
+	v2.symetric_difference(v1)             2,4          1,4          1,2
+	v1.symetric_difference_dupdate(v2)    none          2,4          1,2
+	v2.symetric_difference_update(v1)     none       1,4             2,4
+	
+	1.intersection:
+	                               ans       v1       v2 
+					 
+	v1.intersection(v2)            1         1,4     1,2
+	v2.intersection(v1)           1           1,4     1,2
+	v1.intersection_update(v2)    none      1         1,2
+	v2.intersection_update(v1)     none     1,4        1
+	
+	other properties:
+	ethod	                Description
+1.add()	                  Adds an element to the set
+
+2.clear()	             Removes all elements from the set
+
+3.copy()	             Returns a copy of the set
+
+4.difference()	         Returns the difference of two or more sets as a new set
+
+5.difference_update()	Removes all elements of another set from this set
+
+6.discard()          	Removes an element from the set if it is a member. (Do nothing if the element is not in set)
+
+7.intersection()	    Returns the intersection of two sets as a new set
+
+8.intersection_update()	Updates the set with the intersection of itself and another
+
+9.isdisjoint()       	Returns True if two sets have a null intersection
+
+10.issubset()	        Returns True if another set contains this set
+
+11.issuperset()      	Returns True if this set contains another set
+
+12.pop()	             Removes and returns an arbitrary set element. Raises KeyError if the set is empty
+
+13.remove()	             Removes an element from the set. If the element is not a member, raises a KeyError
+
+		dictionary
+			zip
+			enumrate
+	
+Mathematical Operators:
+
+pytohn built in commands:
+	len             --> Length of container (list / tuple / set / dictionary)
+	type            --> Type of object (class type / data type / module type)
+	id              --> Memory location of object
+	is              --> comparator operator to coampare two object based on id
+	isinstance      --> The isinstance() function returns True if the specified object is of the specified type, otherwise False.
+	__size__
+	
+content equality:
+	reference       --> is
+	content         --> ==
+	type            --> type
+	
+Flow Control: Looping Concepts
+	Selective
+		if...elif
+	Iterative
+		for
+			range
+		while
+			condition
+	Transfer
+		break       --> to stop the current loop from execution
+		continue    --> to stop current iteration and proceed with next 
+		return      --> stop the loop and finish the method from execution
+		pass        --> simply pass to next iteration --> generally used to defined for empty body in loop or method
+
+Object
+	Entities (Class)
+	Behaviour (Def / Method)
+	Properties (Variable / Parameter)
+	encapsulation
+	
+Object Oriented Programming
+	Class
+		__init__
+		__str__
+		__repr__
+		__eq__
+		__hash__
+		set_
+		get_
+	Methods
+	abstraction
+	inheritance
+	Polymorphism / Overloading
+	Method Resolution Order
+
+Types of Variable
+	Global
+	Local
+	Class
+	Instance
+	Statement Level 
+	Non Local
+	
+Types of Methods
+	Class Method
+	Static Method
+	Instance Method
+
+Types of Parameters
+	Mandatory Parameter
+	Positional Parameter
+	Named Parameter
+	Deafault Parameter
+	Args
+	Kwargs
+
+Private Heap and Thread Stack
+	
+Exceptional Handling
+	try
+	except
+	else
+	finally
+	raise
+
+Collection Module -->
+	Deque	--> : list,wrapper of list --> 
+				deq.appendleft():start la:left la <-->		list.append()-->last la : right la
+				deq.extendleft()			left:extend:requires --iterable: right
+				deq.rotate()		
+				deq.popleft(): first element will be removed,return	<->	list.pop(): last remove,return
+	Counter  --> : dict,		
+	DefaultDict : dict
+	OrderedDict : dict
+	Chainmap : dict
+	NamedTupled :tuple
+			
+Itertools
+    product     --> all possible combinations --> frwd+backwdrd+self
+    combination     #frwd
+    permutation     # frwd+backed
+    combnination_With_Replacement --> frwd+self
+
+    count --> +Ve/-ve --> integral/decimal --> infinite
+    repeat --> same object n times -> repeat kela jato --> iterable not required --> finite / infinite
+    cycle   --> iterable --> rotational -- circular --> infinite]
+
+    accumalate
+    filterfalse
+    dropwhile
+    takewhile
+    tee --> 1 iterbale ---> n iterable --> tee
+                copy --> one copy
+                n copies --> tee
+    groupby
+    compress
+    chain
+    isslice
+    starmap
+    ziplongest	
+
+Lambda
+	map
+	filter
+	reduce
+	comprehension
+	
+Iterator
+	iter
+	next
+	
+Genrator
+	yield
+
+property --> to apply business constraints on-- instance fields --> getter/setters - validation points ---> protected variable --fget/fset --> and so on
+	setter
+	getter
+	protected variables
+	
+decorators
+	single decorator
+	decorator chaining
+	decorator with parameter
+	
+closure
+
+assertion
+	unti test
+	pytest
+
+File Handling: CRUD Operations
+	Operations:
+		r 
+		w
+		a 
+		b 
+		x
+		r+
+		w+
+		rb 
+		wb 
+	
+	File Formats:
+		txt
+		csv
+		xlsx
+		json
+		xml
+		yaml
+		database
+
+context manager concept
+
+python in bulit module
+	random
+	datetime
+	re
+	os
