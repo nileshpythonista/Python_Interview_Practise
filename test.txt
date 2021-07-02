@@ -1,7 +1,4 @@
 
-
-This is test file. 
-Added now new modification
 password: **************
 
 secret_key= ********************************
