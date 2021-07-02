@@ -4,187 +4,108 @@ list:
 	dupliactes allowed,
 	list is mutable we can modify at any time
 	reprented by [] ---> flat or square brackets.
-	
-	
 indexing:
-
 		position i=of the specific elememnt
-	
 list operations:
-
 1)append:
-
 		used to add an element at the end of the existing list
-		
 		i,e
 		val=[1,2,'scoopen',3]
 		val.append(56)
 		print(val)-------> [1,2,'scoopen',3,56] --->output
-		
 2)insert:
-
 		used to insert an element in a perticular postion.
-		
 		ie.e
-		
 			val=[1,2,'scoopen',3]
 			val.insert('position_number','new_element)
 			val.insert(3,'hello')
 			print(val)
-					
 			-------> [1,2,'scoopen','hello',3]-->output
-			
 3)pop():
 		it simply removed last element from the existing list
-		
-		
 		i.e,
 			val=[1,2,'scoopen',3]
 			val.pop()
 			print(val)
-			
 			----->[1,2,'scoopen']---->output
-				
-				
 4)remove:
 		* this removes first occurance of the given element from the existing list.
 		* if element not found then gives error.
-		
-		
 					val=[1,2,'scoopen',3,2,5]
 					val.remove(2)
 					print(val)
-
 				-------> [1,'scoopen',3,2,5] -->output
-		
 5)reverse:
 			This simply reverse the order of the elements from the list
-			
 			i.e,
-			
 			val=[1,4,2,5]
 			val.reverse()
 			print(val)
-			
 			--->[5,2,4,1]--->output
-			
 6)count:
 			This method returns the no of occurance of a specific elements in the list.
-			
 			i.e
-			
 			val=[1,2,3,4,4,5,2,2]
 			print(val.count(2))
-			
 			output----> 3
-			
 7)sort:
 		This method is used to sort elements of the list into ascending order.
-		
-		
 		i.e, asc order
-		
 			val=[1,2,3,4,4,5,2,2]
 			print(val.sort())
-			
 			output----> [1,2,2,2,4,4,5]
-			
 		ex: desc order
-			
 			val=[1,2,3,4,4,5,2,2]
 			print(val.sort(reverse=True))
-			
 			output----> [5,4,4,3,2,2,2,1]
-			
-			
 8)clear:
 		This methos is uses to delete all the elements from the list.
-		
 		i.e,
-		
 					val=[1,2,3,4,4,5,2,2]
 					print(val.clear)
-					
 					ouptut---->. none
-					
 9)list concatenation:
 		simply joins the two list
 		val1=[1,2,3,'scoopen']
 		val2=[4,7]
-		
 		print(val1+val2)
-		
 		output---->  [1,2,3,'scoopen',4,7]
-		
-		
 10) copying list:
 			This is used to copy the list.but both are independent to each other,& memory address will not be same.
- 
- 
 		ie,
-		
 			val1=[1,2,3,'scoopen']
 			print(val.copy()
-	
-	
 		otut---> [1,2,3,'scoopen']
-				
 			---> [1,2,3,'scoopen']
-
 11)Repetation *:
 				This is uded to repeate the elements of the list.
-
 				val1=[1,2,3,'scoopen']
 				print(val*2)
-
 				otuput---> [1,2,3,'scoopen',1,2,3,'scoopen']
-				
 tuple:
 		Tuple is an ordered collection,
 		seq maintained ,so we can access the elements by indexing method.
 		tuples are immutable
 		tuples are represnted by ()---> parenthesis
 		we cant update or modify the tuple. and separated by comma.
-		
-		
-		
-		
 tuple operations:
 note:
  val=(10) ---> is not a tuple its an integer.
  val=(10,) ----> called tuple
-
-
 1)Repetation *:
 				This is uded to repeate the elements of the tuple.
-
 				val=(1,2,3,'scoopen')
 				print(val*2)
-
 				otuput---> (1,2,3,'scoopen',2,3,'scoopen')
-				
 2)indexing:
 		position i=of the specific elememnt,by this we can acces the elements.
-		
 		i.e,
-		
 			val=(1,2,3,'scoopen')
 			print(val[1])
-			
 			ouypuy --> 2
-
 3) delete:
 		This is used to delete the tuple but we can't delete the elements.
-		
 		i.e,
-		
 				val=(1,2,3,'scoopen')
 				del val
-				
-				
 				ouput---> process finished with 0
-		
-
-
-		
-

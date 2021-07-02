@@ -2,3 +2,6 @@
 
 This is test file. 
 Added now
+password: Anatares#1
+
+secret_key= 'asdfadsf234dssfadsf34rwdfadsf'
