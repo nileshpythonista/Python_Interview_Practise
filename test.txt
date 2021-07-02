@@ -2,6 +2,6 @@
 
 This is test file. 
 Added now new modification
-password: Anatares#1
+password: **************
 
-secret_key= 'asdfadsf234dssfadsf34rwdfadsf'
+secret_key= ********************************
